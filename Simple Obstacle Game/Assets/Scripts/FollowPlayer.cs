@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    [SerializeField] Transform playerTransform;
+    [SerializeField] Transform playerTransform = null;
     [SerializeField] Vector3 offset;        // camera offset
 
     // Update is called once per frame

@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5117148435101964162, guid: 283bd3935a712604eb43d56eb6a753e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5117148435101964165, guid: 283bd3935a712604eb43d56eb6a753e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 5117148435101964169, guid: 283bd3935a712604eb43d56eb6a753e6,
         type: 3}
       propertyPath: m_Name
-      value: Obstacle No Gravity (5)
+      value: Obstacle Medium No Gravity Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283bd3935a712604eb43d56eb6a753e6, type: 3}
