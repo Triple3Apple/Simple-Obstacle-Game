@@ -5,9 +5,9 @@ using UnityEngine;
 public class EndTrigger : MonoBehaviour
 {
 
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameManager _gameManager;
     private void OnTriggerEnter(Collider other)
     {
-        gameManager.CompleteLevel();
+        _gameManager.CompleteLevel();
     }
 }

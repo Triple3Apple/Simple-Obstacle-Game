@@ -6,11 +6,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] private Rigidbody rb = null;
-    [SerializeField] private float forwardForce = 2000f;
-    [SerializeField] private float sideForce = 500f;
-    [SerializeField] private float maxSpeed = 125f;
-    [SerializeField] private PlayerMovement playerMoveScript = null;
+    [SerializeField] private Rigidbody _rb = null;
+    [SerializeField] private float _forwardForce = 2000f;
+    [SerializeField] private float _sideForce = 500f;
+    [SerializeField] private float _maxSpeed = 125f;
+    [SerializeField] private PlayerMovement _playerMoveScript = null;
 
     // Start is called before the first frame update
     void Start()
@@ -23,24 +23,24 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // add a forward force to player
-        rb.AddForce(0, 0, forwardForce * Time.deltaTime);        // delta time is used to create frame rate independent movement
+        _rb.AddForce(0, 0, _forwardForce * Time.deltaTime);        // delta time is used to create frame rate independent movement
 
         if (Input.GetKey("d"))
         {
-            rb.AddForce(sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            _rb.AddForce(_sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         else if (Input.GetKey("a"))
         {
-            rb.AddForce(-sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            _rb.AddForce(-_sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        //Debug.Log(rb.velocity);
+        Debug.Log(_rb.velocity);
 
         //rb.velocity = constantSpeed * (rb.velocity.normalized);
 
         LockSpeed();
 
-        if (rb.position.y < -0.5f)
+        if (_rb.position.y < -0.5f)
         {
             enabled = false;            // disabling this script
             //FindObjectOfType<GameManager>().EndGame();
@@ -55,9 +55,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void LockSpeed()
     {
-        if (rb.velocity.magnitude > maxSpeed)
+        if (_rb.velocity.magnitude > _maxSpeed)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            _rb.velocity = _rb.velocity.normalized * _maxSpeed;
         }
     }
 }

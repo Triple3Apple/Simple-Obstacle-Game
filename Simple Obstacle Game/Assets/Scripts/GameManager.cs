@@ -5,21 +5,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private bool gameHasEnded = false;
+    [SerializeField] private bool _gameHasEnded = false;
 
-    [SerializeField] private float restartDelay = 2f;
+    [SerializeField] private float _restartDelay = 2f;
 
-    [SerializeField] private GameObject completeLevelUI = null;
+    [SerializeField] private GameObject _completeLevelUI = null;
 
     public bool isLevelCompleted = false;
 
     public void EndGame()
     {
-        if (!gameHasEnded)
+        if (!_gameHasEnded)
         {
-            gameHasEnded = true;
+            _gameHasEnded = true;
             Debug.Log("Game Over");
-            Invoke("Restart", restartDelay);    // will invoke method after restartDelay number of seconds
+            Invoke("Restart", _restartDelay);    // will invoke method after _restartDelay number of seconds
         }
         
     }
@@ -33,6 +33,6 @@ public class GameManager : MonoBehaviour
     {
         isLevelCompleted = true;
         Debug.Log("Level Completed");
-        completeLevelUI.SetActive(true);
+        _completeLevelUI.SetActive(true);
     }
 }

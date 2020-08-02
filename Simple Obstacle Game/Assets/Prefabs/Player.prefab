@@ -104,7 +104,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2951009300441457645}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 1
   m_AngularDrag: 0.01
   m_UseGravity: 1
@@ -124,11 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2afba2aa89b5649b3774951e3cd428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 2951009300441457646}
-  forwardForce: 8000
-  sideForce: 100
-  maxSpeed: 110
-  playerMoveScript: {fileID: 0}
+  _rb: {fileID: 2951009300441457646}
+  _forwardForce: 15000
+  _sideForce: 50
+  _maxSpeed: 125
+  _playerMoveScript: {fileID: 2951009300441457635}
 --- !u!114 &2951009300441457636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,4 +141,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370b63bf0bd9bf94791b65897e244ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoveScript: {fileID: 2951009300441457635}
+  _playerMoveScript: {fileID: 2951009300441457635}

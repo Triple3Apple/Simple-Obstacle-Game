@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b685c050d0b014e96ce921072ad4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameHasEnded: 0
-  restartDelay: 1
-  completeLevelUI: {fileID: 0}
+  _gameHasEnded: 0
+  _restartDelay: 2
+  _completeLevelUI: {fileID: 0}
   isLevelCompleted: 0

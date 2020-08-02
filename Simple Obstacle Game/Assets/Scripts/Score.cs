@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private Transform playerTransform = null;
-    [SerializeField] private Text scoreText = null;
+    [SerializeField] private Transform _playerTransform = null;
+    [SerializeField] private Text _scoreText = null;
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = ((int)playerTransform.position.z).ToString();  // converting and rounding number
+        _scoreText.text = ((int)_playerTransform.position.z).ToString();  // converting and rounding number
     }
 }
