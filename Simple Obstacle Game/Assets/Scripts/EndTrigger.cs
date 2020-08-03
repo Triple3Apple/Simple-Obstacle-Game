@@ -8,6 +8,9 @@ public class EndTrigger : MonoBehaviour
     [SerializeField] private GameManager _gameManager;
     private void OnTriggerEnter(Collider other)
     {
-        _gameManager.CompleteLevel();
+        if (other.CompareTag("Player") && _gameManager.GetPlayerDeadBool() == false) 
+        { 
+            _gameManager.CompleteLevel(); 
+        }
     }
 }

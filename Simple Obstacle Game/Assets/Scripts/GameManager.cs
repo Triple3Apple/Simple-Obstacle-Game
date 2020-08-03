@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;      // Added for restarting scene/level
 using UnityEngine;
+using System.Dynamic;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject _completeLevelUI = null;
 
+    private bool _hasPlayerDied = false;
+
     public bool isLevelCompleted = false;
 
     public void EndGame()
@@ -18,6 +21,7 @@ public class GameManager : MonoBehaviour
         if (!_gameHasEnded)
         {
             _gameHasEnded = true;
+            _hasPlayerDied = true;
             Debug.Log("Game Over");
             Invoke("Restart", _restartDelay);    // will invoke method after _restartDelay number of seconds
         }
@@ -34,5 +38,10 @@ public class GameManager : MonoBehaviour
         isLevelCompleted = true;
         Debug.Log("Level Completed");
         _completeLevelUI.SetActive(true);
+    }
+
+    public bool GetPlayerDeadBool()
+    {
+        return _hasPlayerDied;
     }
 }

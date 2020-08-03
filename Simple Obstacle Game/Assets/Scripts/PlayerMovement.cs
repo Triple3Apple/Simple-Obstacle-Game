@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             _rb.AddForce(-_sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        Debug.Log(_rb.velocity);
+        //Debug.Log(_rb.velocity);
 
         //rb.velocity = constantSpeed * (rb.velocity.normalized);
 
