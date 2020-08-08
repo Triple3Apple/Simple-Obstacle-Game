@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
         // un-freeze time
         Time.timeScale = 1f;
         Debug.Log("going to main menu");
+        Destroy(FindObjectOfType<MusicPlayer>());
         SceneManager.LoadScene(0);          // first index (main menu)
     }
 

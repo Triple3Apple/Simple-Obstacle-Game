@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -11,11 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _sideForce = 500f;
     [SerializeField] private float _maxSpeed = 125f;
     [SerializeField] private PlayerMovement _playerMoveScript = null;
+    public Vector3 _centerOfMass;
+
+    private Rigidbody _rigidBody;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _rigidBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -50,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
                 gm.EndGame();
             }
         }
+
+        _rigidBody.centerOfMass = _centerOfMass;
         
     }
 
@@ -59,5 +65,11 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.velocity = _rb.velocity.normalized * _maxSpeed;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position + transform.rotation * _centerOfMass, 0.8f);
     }
 }

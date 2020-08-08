@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Boost : MonoBehaviour
 {
     [SerializeField] private float boostAmount = 5000f;
     [SerializeField] private GameObject _boostCameraEffect = null;
     [SerializeField] private int _boostEffectDurationSE = 3;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -27,6 +29,12 @@ public class Boost : MonoBehaviour
     {
         // disable effect after time specified
         Debug.Log("Waiting for " + _boostEffectDurationSE + " seconds");
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+
+        AudioClip audioClip = audioSource.clip;
+        audioSource.PlayOneShot(audioClip);
+
         yield return new WaitForSeconds(_boostEffectDurationSE);
 
         _boostCameraEffect.SetActive(false);    // turn off effect

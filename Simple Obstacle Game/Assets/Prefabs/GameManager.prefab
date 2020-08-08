@@ -44,6 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameHasEnded: 0
-  _restartDelay: 2
+  _restartDelay: 1
   _completeLevelUI: {fileID: 0}
+  _transition: {fileID: 0}
+  _transitionDuration: 2
+  _playerMoveScript: {fileID: 0}
+  _musicPlayer: {fileID: 0}
   isLevelCompleted: 0
