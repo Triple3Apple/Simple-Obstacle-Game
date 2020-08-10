@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 8
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4823,6 +4823,7 @@ GameObject:
   - component: {fileID: 2511613505781622002}
   - component: {fileID: 2511613505781622000}
   - component: {fileID: 2511613505781622001}
+  - component: {fileID: 7616977349144584291}
   m_Layer: 0
   m_Name: Tumbleweed Particle System
   m_TagString: Obstacle
@@ -4838,7 +4839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511613505781622003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: -10.92}
+  m_LocalPosition: {x: 8.16, y: 22.32, z: -10.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2511613505212786997}
@@ -4928,8 +4929,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 15
-      minScalar: 10
+      scalar: 18
+      minScalar: 17
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5480,7 +5481,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 15, y: 4, z: 1}
+    m_Scale: {x: 27, y: 4, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -5678,7 +5679,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5812,14 +5813,14 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.12238353
         - serializedVersion: 3
-          time: 0.9331734
-          value: 1
-          inSlope: 0.13480994
-          outSlope: 0.13480994
+          time: 0.96419513
+          value: 0.94594616
+          inSlope: -0.7259562
+          outSlope: -0.7259562
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.1266759
-          outWeight: 0.6909089
+          inWeight: 0.123196155
+          outWeight: 0.7777848
         - serializedVersion: 3
           time: 1
           value: 0
@@ -8389,7 +8390,7 @@ ParticleSystem:
     serializedVersion: 3
     type: 1
     collisionMode: 0
-    colliderForce: 0
+    colliderForce: 1
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
@@ -9585,6 +9586,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7616977349144584291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511613505781622003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d51c7768fda184fa1550bd703649b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollisionScript: {fileID: 0}
 --- !u!1 &2511613506631910770
 GameObject:
   m_ObjectHideFlags: 0
@@ -9596,7 +9610,7 @@ GameObject:
   - component: {fileID: 2511613506631910769}
   m_Layer: 0
   m_Name: Tumbleweed zone
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9608,11 +9622,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511613506631910770}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00000028088027}
   m_LocalPosition: {x: 0, y: 2, z: 189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2511613505781622002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
