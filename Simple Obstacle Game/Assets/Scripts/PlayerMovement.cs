@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    // Use "FixedUpdate" for PHYSICS!!!
+    // Use "FixedUpdate" for PHYSICS!
     void FixedUpdate()
     {
         // add a forward force to player
@@ -37,10 +37,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.AddForce(-_sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-
-        //Debug.Log(_rb.velocity);
-
-        //rb.velocity = constantSpeed * (rb.velocity.normalized);
 
         LockSpeed();
 
@@ -73,3 +69,5 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawSphere(transform.position + transform.rotation * _centerOfMass, 0.8f);
     }
 }
+
+// https://github.com/Triple3Apple

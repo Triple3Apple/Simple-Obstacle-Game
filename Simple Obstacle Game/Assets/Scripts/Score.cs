@@ -15,3 +15,5 @@ public class Score : MonoBehaviour
         _scoreText.text = ((int)_playerTransform.position.z).ToString();  // converting and rounding number
     }
 }
+
+// https://github.com/Triple3Apple

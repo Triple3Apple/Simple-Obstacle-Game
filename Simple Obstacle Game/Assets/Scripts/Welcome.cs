@@ -7,11 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class Welcome : MonoBehaviour
 {
-
     [SerializeField] private Animator _transition = null;
-
     [SerializeField] private float _transitionDuration = 2f;
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        }
+        else if (Input.GetKey(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
+        }
+        else if (Input.GetKey(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 3));
+        }
+    }
 
     public void StartGame()
     {
@@ -29,6 +42,7 @@ public class Welcome : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    // Loads level afetr some time (to allow animation/level transition to play before changing scene)
     IEnumerator LoadLevel(int levelIndex)
     {
         // play animation
@@ -41,3 +55,5 @@ public class Welcome : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 }
+
+// https://github.com/Triple3Apple

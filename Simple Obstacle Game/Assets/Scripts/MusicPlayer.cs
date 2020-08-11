@@ -9,9 +9,7 @@ public class MusicPlayer : MonoBehaviour
 
     [SerializeField] float _maxMusicVolume = 75f;
     [SerializeField] float _fadeInSpeed = 0.5f;
-    //[SerializeField] int _sceneIndex;       // please change this!
 
-    // Start is called before the first frame update
     void Awake()
     {
         SetUpSingleton();
@@ -54,3 +52,5 @@ public class MusicPlayer : MonoBehaviour
         Debug.Log("Destroyed Music player");
     }
 }
+
+// https://github.com/Triple3Apple

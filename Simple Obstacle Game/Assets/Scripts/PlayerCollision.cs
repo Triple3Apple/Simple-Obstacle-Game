@@ -20,7 +20,6 @@ public class PlayerCollision : MonoBehaviour
             Rigidbody rb = GetComponent<Rigidbody>();
             rb.constraints = RigidbodyConstraints.None;  
 
-
             // Used this instead of referencing via serializefield
             // This allows us to get GameManager even if new player object is created
 
@@ -54,3 +53,5 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 }
+
+// https://github.com/Triple3Apple

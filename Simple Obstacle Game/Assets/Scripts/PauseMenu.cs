@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
     public static bool gameIsPaused = false;
 
     [SerializeField] private GameObject pauseMenuUI = null;
@@ -55,3 +54,5 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = true;
     }
 }
+
+// https://github.com/Triple3Apple

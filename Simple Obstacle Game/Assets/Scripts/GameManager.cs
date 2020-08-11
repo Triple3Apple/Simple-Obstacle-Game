@@ -7,18 +7,12 @@ using System.Dynamic;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private bool _gameHasEnded = false;
-
     [SerializeField] private float _restartDelay = 2f;
-
     [SerializeField] private GameObject _completeLevelUI = null;
-
     [SerializeField] private Animator _transition = null;
-
     [SerializeField] private float _transitionDuration = 2f;
-
     [SerializeField] private PlayerMovement _playerMoveScript = null;
 
-    //[SerializeField] private MusicPlayer _musicPlayer = null;
 
     private GameObject _musicPlayer = null;
 
@@ -45,7 +39,6 @@ public class GameManager : MonoBehaviour
 
     private void Restart()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);     // restarts current scene! (no strings)
         StartCoroutine(RestartLevel());
     }
 
@@ -79,9 +72,6 @@ public class GameManager : MonoBehaviour
         // wait (pauses couroutine for x seconds)
         yield return new WaitForSeconds(_transitionDuration);
 
-        // music player destroyed
-        //_musicPlayer.DestroySelf();
-        //Destroy(_musicPlayer);
         DestroyMusicPlayer();
 
         // load scene
@@ -100,3 +90,5 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);     // restarts current scene! (no strings)
     }
 }
+
+// https://github.com/Triple3Apple

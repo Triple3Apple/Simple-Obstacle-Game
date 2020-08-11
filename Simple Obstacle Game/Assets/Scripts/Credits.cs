@@ -7,7 +7,7 @@ public class Credits : MonoBehaviour
 {
     public void Quit()
     {
-        Debug.Log("Quit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        Debug.Log("Quit!");
         Application.Quit();
     }
 
@@ -18,3 +18,5 @@ public class Credits : MonoBehaviour
 
     }
 }
+
+// https://github.com/Triple3Apple

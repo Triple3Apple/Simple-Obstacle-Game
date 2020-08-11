@@ -25,6 +25,7 @@ public class Boost : MonoBehaviour
         }
     }
 
+    // Boost camera effect lasts for time given
     IEnumerator DisableBoost()
     {
         // disable effect after time specified
@@ -41,3 +42,5 @@ public class Boost : MonoBehaviour
         Debug.Log("boost effect DISABLED");
     }
 }
+
+// https://github.com/Triple3Apple

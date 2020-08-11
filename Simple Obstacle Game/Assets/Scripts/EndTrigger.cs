@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EndTrigger : MonoBehaviour
 {
-
     [SerializeField] private GameManager _gameManager;
     private void OnTriggerEnter(Collider other)
     {
@@ -14,3 +13,5 @@ public class EndTrigger : MonoBehaviour
         }
     }
 }
+
+// https://github.com/Triple3Apple
